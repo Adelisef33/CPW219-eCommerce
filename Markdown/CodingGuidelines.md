@@ -1,7 +1,8 @@
 # Here is a breakdown of coding guidelines this project will try to best follow (May mess it up a bit by accident but i hope to catch it and fix it fast.) Again everything listed is for this project specifically.
 
 ## Structure
-- To be added
+
+![PlanFlowchart](Plan.png)
 
 ## Indentation
 - Use Tab to make indentation
