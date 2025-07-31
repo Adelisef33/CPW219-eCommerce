@@ -6,11 +6,11 @@
 
 ## Indentation
 - Use Tab to make indentation
-- NEVER use spaces for efficiency  
+- Spaces are also okay as VS defaults to spaces 
 
 ## Type
 - Use PascalCase for type names
-- Use camelCase for function and method names
+- Use PascalCase for function and method names
 - Use camelCase for property names and local variables
 - Use whole words in names when possible (or simplified words if its easier to read)
 
@@ -20,9 +20,9 @@
   Example:
   ```
    for (int i = 1; i <= 5; i++)
-          {
-              Console.WriteLine("Number: " + i);
-          }
+    {
+      Console.WriteLine("Number: " + i);
+    }
   ```
 - Use "Double Quotations" for strings
 
