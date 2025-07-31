@@ -17,3 +17,7 @@ of ASP.NET Core MVC (Model View Controller).
 - Entity Framework Core
 - Bootstrap 5
 - HTML/CSS/JS
+
+## My Coding Guidelines
+
+[Coding Guidelines](Markdown/CodingGuidelines.md)
