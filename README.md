@@ -3,10 +3,8 @@ This is a website to learn the fundamentals
 of ASP.NET Core MVC (Model View Controller).
 
 ## Upcoming Features 
-- Styling with Bootstrap 5
-- CRUD (Create, Read, Update, Delete) functionality with Entity Framework Core
-- Login/Register
-- Shopping Cart
+
+[Click here to read more about the features](Markdown/UpcomingFeatures.md)
 
 ## How to get started
 - Clone or download the repository
