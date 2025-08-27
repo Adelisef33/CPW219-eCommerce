@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eCommerce.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace eCommerce.Data
+namespace eCommerce.Data;
 
-public class ProductDBContext : DBContext
+public class ProductDBContext : DbContext
 {
     public ProductDBContext(DbContextOptions options) : base(options)
     {
