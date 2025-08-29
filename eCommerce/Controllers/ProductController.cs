@@ -2,6 +2,7 @@
 using eCommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace eCommerce.Controllers;
 
@@ -16,10 +17,10 @@ public class ProductController : Controller
         _context = context;
     }
 
-    public async  Task<IActionResult> Index()
+    public async Task<IActionResult> Index()
     {
-        List<Product> allProducts = await _context.Products.ToListAsync();
-        return View(allProducts);
+        var products = await _context.Products.ToListAsync();
+        return View(products);
     }
 
     [HttpGet]
