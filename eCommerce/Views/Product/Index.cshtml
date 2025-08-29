@@ -1,0 +1,44 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Product Listings";
+}
+
+<h2>Product Listing</h2>
+
+<a asp-action="Create" asp-controller="Product" class="btn btn-secondary mb-3">
+    Create Product
+</a>
+
+@if (!Model.Any())
+{
+    <p>No products are currently found</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Links</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Product product in Model)
+            {
+                <tr>
+                    <td>@product.Title</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Product" 
+                            asp-action="Edit" 
+                            asp-route-id="@product.ProductId">Update</a>
+                        <a class="btn btn-danger" asp-controller="Product"
+                            asp-action="Delete"
+                            asp-route-id="@product.ProductId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
