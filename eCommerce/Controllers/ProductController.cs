@@ -3,6 +3,7 @@ using eCommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace eCommerce.Controllers;
 
@@ -57,6 +58,23 @@ public class ProductController : Controller
         }
 
         return View(product);
+    }
+
+    public async Task<IActionResult> Delete(int id)
+    { 
+        Product? product = _context.Products
+            .Where(p => p.ProductId == id).FirstOrDefault();
+
+        if (product == null)
+        {
+            return RedirectToAction(nameof(Index));
+        }
+
+        _context.Remove(product);
+        await _context.SaveChangesAsync();
+
+        TempData["message"] = $"{product.Title} was sucessfully deleted";
+        return RedirectToAction(nameof(Index));
     }
 }
 
